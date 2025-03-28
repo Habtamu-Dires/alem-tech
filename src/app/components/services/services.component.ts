@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Service } from '../../models/service.model';
 import { CommonModule } from '@angular/common';
 
@@ -9,6 +9,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './services.component.css'
 })
 export class ServicesComponent {
+
+  @Input() showDrawer: boolean = false;
+
   services: Service[] = [
     {
       name: 'Smart Websites',

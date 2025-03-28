@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from '../../models/product.model';
 import { CommonModule } from '@angular/common';
 
@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
+
+  @Input() showDrawer: boolean = false;
 
   products: Product[] = [
     {

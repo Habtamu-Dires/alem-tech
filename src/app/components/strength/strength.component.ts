@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Strength } from '../../models/strength.model';
 import { CommonModule } from '@angular/common';
 
@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './strength.component.css'
 })
 export class StrengthComponent {
+
+  @Input() showDrawer: boolean = false;
 
   strengths: Strength[] = [
     {

@@ -1,5 +1,6 @@
 <!-- src/app/components/why-choose-us/why-choose-us.component.html -->
-<section class="py-16 bg-brand relative overflow-hidden">
+<section class="py-16 relative overflow-hidden"
+    [ngClass]="{'bg-brand': !showDrawer, 'bg-black': showDrawer}">
     <div class="max-container mx-auto px-4 text-center">
       <!-- Title -->
       <h2 class="text-4xl font-bold text-white mb-4">
@@ -13,8 +14,9 @@
       <div class="md:h-[400px] flex flex-wrap items-center justify-center gap-6">
         <!-- Strength Cards -->
         <div *ngFor="let strength of strengths; let i = index"
-             class="w-64 h-52 p-6 bg-white rounded-lg shadow-lg transform transition-all 
-                    duration-500 hover:shadow-xl hover:scale-105">
+             class="w-64 h-52 p-6 rounded-lg shadow-lg transform transition-all 
+                    duration-500 hover:shadow-xl hover:scale-105"
+                    [ngClass]="{'bg-white': !showDrawer, 'bg-black': showDrawer}">
           <!-- Icon -->
           <img *ngIf="strength.iconUrl" [src]="strength.iconUrl" [alt]="strength.title" 
               class="w-24 h-14 mx-auto mb-4">

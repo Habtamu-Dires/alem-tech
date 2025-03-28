@@ -10,19 +10,21 @@
     </section>
     <!--hero-->
     <section id="home" class="pt-[96px] md:pt-[92px]">
-        <app-hero></app-hero>
+        <app-hero [showDrawer]="drawerShown"></app-hero>
     </section>
     <!--what we do-->
-    <section id="services" class="py-16 bg-gray-100">
-       <app-services></app-services>
+    <section id="services" class="py-16"
+        [ngClass]="{'bg-gray-100': !drawerShown, 'bg-black': drawerShown}">
+       <app-services [showDrawer]="drawerShown"></app-services>
     </section>
     <!--why choose us-->
     <section>
-        <app-strength></app-strength>
+        <app-strength [showDrawer]="drawerShown">
+        </app-strength>
     </section>
     <!--our products-->
     <section id="products">
-        <app-products></app-products>
+        <app-products [showDrawer]="drawerShown"></app-products>
     </section>
     <!--footer-->
     <footer id="contactus" class="w-full">
