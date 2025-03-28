@@ -1,9 +1,5 @@
 <div class="font-montserrat leading-normal bg-inherit text-lg text-slate-gray p-2 cursor-pointer hover:text-brandText">
     <p class="md:text-sm" 
-      [ngClass]="{
-        'text-white': !onMobileView && !isActiveComponent, 
-        'text-gray-600': onMobileView && !isActiveComponent,
-        'text-gray-400': isActiveComponent
-      }">
+      [ngClass]="{'text-white': !onMobileView, 'text-gray-800': onMobileView  }">
         {{componentName}}</p>
 </div>
