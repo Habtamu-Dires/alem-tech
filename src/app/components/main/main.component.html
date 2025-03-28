@@ -1,0 +1,33 @@
+<main class="relative min-h-screen w-full flex flex-col gap-4"
+       [ngClass]="{'black-bg': drawerShown}">
+    <!--header-->
+    <section class="fixed top-0 z-50 bg-bgBrand flex justify-center items-center w-full">
+            <app-header 
+                class="w-full"
+                (onSectionSelected)="onSectionSelected($event)"
+                (onShowDrawer)="onShawDrawer($event)"
+            ></app-header>       
+    </section>
+    <!--hero-->
+    <section id="home" class="pt-[96px] md:pt-[92px]">
+        <app-hero></app-hero>
+    </section>
+    <!--what we do-->
+    <section id="services" class="py-16 bg-gray-100">
+       <app-services></app-services>
+    </section>
+    <!--why choose us-->
+    <section>
+        <app-strength></app-strength>
+    </section>
+    <!--our products-->
+    <section id="products">
+        <app-products></app-products>
+    </section>
+    <!--footer-->
+    <footer id="contactus" class="w-full">
+        <app-footer [showDrawer]="drawerShown"></app-footer>
+    </footer>
+</main>
+
+

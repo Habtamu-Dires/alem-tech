@@ -1,0 +1,33 @@
+<section class="py-16 bg-gray-200">
+    <div class="max-container mx-auto px-4">
+      <!-- Title -->
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Our Products</h2>
+      <p class="text-lg text-gray-600 text-center mb-12">Ready-to-deploy solutions for your industry.</p>
+  
+      <!-- Products -->
+      <div class="flex flex-col md:flex-row md:flex-wrap justify-center gap-8">
+        <div *ngFor="let product of products; let i = index"
+             class="group w-96 relative bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer"
+             [ngClass]="{'md:-rotate-2': i === 0, 'md:rotate-2': i === 2}"
+             (click)="navigateToProduct(product.link)">
+          <!-- Thumbnail -->
+          <img [src]="product.thumbnailUrl" [alt]="product.name" 
+               class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+          
+          <!-- Content -->
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-brandText mb-2">{{ product.name }}</h3>
+            <p class="text-gray-600 mb-4">{{ product.description }}</p>
+            <a [href]="product.link" 
+               target="_blank" 
+               class="text-blue-500 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+               (click)="$event.stopPropagation()">Visit Product
+            </a>
+          </div>
+  
+          <!-- Decorative Accent -->
+          <div class="absolute top-0 left-0 w-16 h-16 bg-blue-200 opacity-20 rounded-full -translate-x-8 -translate-y-8"></div>
+        </div>
+      </div>
+    </div>
+</section>
