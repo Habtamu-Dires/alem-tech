@@ -12,5 +12,5 @@ export class HeroComponent {
   @Input() showDrawer:boolean = false;
 
   slogan:string = 'Innovative Software Solutions for a Smarter Future';
-  description:string = 'Transforming industries with cutting-edge Smart Systems, e-commerce, Transportation & Logistics, and AI-driven technologies';
+  description:string = 'Transforming industries with cutting-edge Smart Websites, e-Commerce and AI-driven Technologies';
 }
